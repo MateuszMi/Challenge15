@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGENCY</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/035652fb63.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="conteiner">
+        <nav class="navbar">
+            <a href="#" class="navbar__logo">
+                <img src="/img/logo.png">
+            </a>
+
+            <div class="navbar__toggle" id="moblie--menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="navbar__menu">
+                <li class="navbar__item"><a class="navbar__links" href="#home">home</a></li>
+                <li class="navbar__item"><a class="navbar__links" href="#work">work</a> </li>
+                <li class="navbar__item"><a class="navbar__links" href="#industries">industries</a></li>
+                <li class="navbar__item"><a class="navbar__links" href="#services">services</a> </li>
+                <li class="navbar__item"><a class="navbar__links" href="#news">news</a> </li>
+                <li class="navbar__item"><a class="navbar__links" href="#who_we_are">who we are</a> </li>
+                <li class="navbar__item"><a class="navbar__links" href="#contact">contact</a> </li>
+            </ul>
+        </nav>
+        <div class="slider-container">
+
+            <div class="mySlides fade">
+                <img src="/img/Group4.png" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="/img/Group8.png" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="/img/Group4.png" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+
+    </div>
+    <script src="slider.js"></script>
+    <script src="menu.js"></script>
+</body>
+
+</html>

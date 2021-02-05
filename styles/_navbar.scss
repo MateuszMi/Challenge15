@@ -1,0 +1,93 @@
+@import "media-queries";
+.navbar {
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    padding: 0.5rem calc((100vw - 1200px)/2);
+    z-index: 9999;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    @include tablet {
+        height: 55px;
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+        margin-left: 24px;
+    }
+    &__menu {
+        display: flex;
+        align-items: center;
+        @include tablet {
+            display: none;
+            &.active {
+                display: grid;
+                grid-template-columns: auto;
+                background: #000;
+                opacity: 1;
+                position: relative;
+                top: 100%;
+                transition: opacity 0.3s ease-in;
+                z-index: 99;
+                font-size: 1rem;
+                height: 100vh;
+                width: 150px;
+                padding-bottom: 30px;
+                text-align: center;
+            }
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        font-size: 0.8rem;
+        padding: 0 1rem;
+        & a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+    @include tablet {
+        &__toggle {
+            & .bar {
+                width: 25px;
+                height: 3px;
+                margin: 5px auto;
+                transition: all 0.5s ease-in-out;
+                background: #fff;
+                display: block;
+                cursor: pointer;
+            }
+        }
+        &__links {
+            text-align: center;
+            padding: 0.5rem;
+            width: 100%;
+            display: block;
+        }
+    }
+}
+
+@include tablet {
+    #moblie--menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    #moblie--menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    #moblie--menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    #moblie--menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+}
