@@ -5,6 +5,12 @@
   background-blend-mode: saturation;
   width: 100%;
   height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 15fr;
+      grid-template-rows: 1fr 15fr;
 }
 
 .navbar {
@@ -21,6 +27,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  grid-column: 2 span;
 }
 
 @media screen and (max-width: 768px) {
@@ -133,80 +140,55 @@
   }
 }
 
-.slider-container {
-  max-width: 50%;
+.slider {
+  max-width: 500px;
   position: relative;
+  padding: 0.9rem calc((50vw - 1200px)/2);
+  margin: auto 5px auto auto;
+  text-align: left;
+}
+
+.slider__item {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+.slider__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: auto;
+  color: #fff;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: #ff0f0f;
-  font-weight: bold;
-  font-size: 18px;
-  -webkit-transition: 0.6s ease;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(226, 8, 8, 0.8);
-}
-
-/* Caption text */
-.text {
-  color: #ff0909;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
+  height: 20px;
+  width: 20px;
+  background-color: #944b4b;
   border-radius: 50%;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
   -webkit-transition: background-color 0.6s ease;
   transition: background-color 0.6s ease;
 }
 
-.active,
-.dot:hover {
-  background-color: #717171;
+.slider__dot {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+.active,
+.dot:hover {
+  background-color: #fa0303;
 }
 
 @-webkit-keyframes fade {

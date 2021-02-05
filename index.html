@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="conteiner">
+    <div class="conteiner" id="home">
         <nav class="navbar">
             <a href="#" class="navbar__logo">
                 <img src="/img/logo.png">
@@ -34,34 +34,28 @@
                 <li class="navbar__item"><a class="navbar__links" href="#contact">contact</a> </li>
             </ul>
         </nav>
-        <div class="slider-container">
-
-            <div class="mySlides fade">
-                <img src="/img/Group4.png" style="width:100%">
-                <div class="text">Caption Text</div>
+        <div class="slider">
+            <div class="slider__item">
+                <h1 class="slider__title">Agency</h1>
+                <h2 class="slider__title--sub">freebie psd download</h2>
+                <p class="slider__text">sdasdasdadfas daushsfuas shfas fuahs fua sfuh asufh asufhaus fauhfsd iass fia sfhias fias fiahsf iashf iaf haisf</p>
             </div>
 
-            <div class="mySlides fade">
-                <img src="/img/Group8.png" style="width:100%">
+            <div class="slider__item">
                 <div class="text">Caption Two</div>
             </div>
 
-            <div class="mySlides fade">
-                <img src="/img/Group4.png" style="width:100%">
+            <div class="slider__item">
                 <div class="text">Caption Three</div>
             </div>
 
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        <br>
-        <div style="text-align:center">
+
+        <div class="slider__dot">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
-
-
     </div>
     <script src="slider.js"></script>
     <script src="menu.js"></script>

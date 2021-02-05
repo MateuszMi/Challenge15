@@ -8,6 +8,7 @@
     width: 100%;
     position: sticky;
     top: 0;
+    grid-column: 2 span;
     @include tablet {
         height: 55px;
     }
