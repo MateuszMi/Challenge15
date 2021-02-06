@@ -4,6 +4,9 @@
     padding: 0.9rem calc((50vw - 1200px)/2);
     margin: auto 5px auto auto;
     text-align: left;
+    @include tablet {
+        margin: auto;
+    }
     &__item {
         -webkit-animation-name: fade;
         -webkit-animation-duration: 1s;
@@ -20,6 +23,7 @@
         @include tablet {
             width: 95%;
             margin: 20px auto auto auto;
+            text-align: center;
         }
     }
     &__title {

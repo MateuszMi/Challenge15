@@ -15,7 +15,13 @@
 
 @media screen and (max-width: 768px) {
   .conteiner {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     background-size: 100%;
     background-size: cover;
     height: 100%;
@@ -158,6 +164,12 @@
   text-align: left;
 }
 
+@media screen and (max-width: 768px) {
+  .slider {
+    margin: auto;
+  }
+}
+
 .slider__item {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1s;
@@ -178,6 +190,7 @@
   .slider__border {
     width: 95%;
     margin: 20px auto auto auto;
+    text-align: center;
   }
 }
 
@@ -360,13 +373,13 @@
 
 .industries {
   padding: 0.5rem calc((100vw - 1200px)/2);
-  background: -webkit-gradient(linear, left top, right top, from(transparent), to(#2b2a2a)), url("/img/Clip.png");
-  background: linear-gradient(to right, transparent, #2b2a2a), url("/img/Clip.png");
+  background: -webkit-gradient(linear, left top, right top, from(transparent)), url("/img/Clip.png");
+  background: linear-gradient(to right, transparent), url("/img/Clip.png");
   height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 12% 10%;
+  background-position: 50% 50%;
   position: relative;
   display: -ms-grid;
   display: grid;
@@ -391,7 +404,7 @@
 
 @media screen and (max-width: 768px) {
   .industries__info {
-    background-color: rgba(220, 218, 218, 0.9);
+    background-color: rgba(220, 218, 218, 0.8);
     padding: 10px;
   }
 }
