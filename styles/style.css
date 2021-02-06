@@ -1,8 +1,8 @@
 .conteiner {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.75))), url(/img/Layer66.png);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(/img/Layer66.png);
-  background-size: cover;
-  background-blend-mode: saturation;
+  background: url(/img/Layer70.png) left no-repeat, -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.748)), to(rgba(0, 0, 0, 0.679))), url(/img/Layer66.png) right no-repeat;
+  background: url(/img/Layer70.png) left no-repeat, linear-gradient(rgba(0, 0, 0, 0.748), rgba(0, 0, 0, 0.679)), url(/img/Layer66.png) right no-repeat;
+  background-blend-mode: screen;
+  background-size: 50% 100%;
   width: 100%;
   height: 100vh;
   display: -ms-grid;
@@ -11,6 +11,13 @@
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr 15fr;
       grid-template-rows: 1fr 15fr;
+}
+
+@media screen and (max-width: 768px) {
+  .conteiner {
+    display: block;
+    background-size: 100%;
+  }
 }
 
 .navbar {
@@ -67,7 +74,7 @@
     display: grid;
     -ms-grid-columns: auto;
         grid-template-columns: auto;
-    background: #000;
+    background: rgba(63, 60, 60, 0.926);
     opacity: 1;
     position: relative;
     top: 100%;
@@ -98,6 +105,7 @@
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
+  margin-left: -10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -155,22 +163,56 @@
   animation-duration: 1s;
 }
 
+.slider__title {
+  color: #fff;
+  font-size: 3.5rem;
+  margin: auto auto 10px auto;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .slider__title {
+    font-size: 2.5rem;
+    margin: 60px 5px auto 5px;
+    text-align: center;
+  }
+}
+
+.slider__title--sub {
+  color: #fff;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .slider__title--sub {
+    font-size: 1.5rem;
+    margin: 20px 5px auto 5px;
+    text-align: center;
+  }
+}
+
 .slider__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: auto;
+  margin: 20px auto auto auto;
   color: #fff;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  line-height: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .slider__text {
+    margin: 30px 5px auto 5px;
+    text-align: justify;
+  }
 }
 
 .dot {
   cursor: pointer;
-  height: 20px;
-  width: 20px;
-  background-color: #944b4b;
+  height: 13px;
+  width: 13px;
+  background-color: white;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -180,15 +222,27 @@
   transition: background-color 0.6s ease;
 }
 
+@media screen and (max-width: 768px) {
+  .dot {
+    display: inline-block;
+  }
+}
+
 .slider__dot {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
+@media screen and (max-width: 768px) {
+  .slider__dot {
+    text-align: center;
+  }
+}
+
 .active,
 .dot:hover {
-  background-color: #fa0303;
+  background-color: #ff0000;
 }
 
 @-webkit-keyframes fade {

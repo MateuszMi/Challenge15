@@ -28,7 +28,7 @@
             &.active {
                 display: grid;
                 grid-template-columns: auto;
-                background: #000;
+                background: rgba(63, 60, 60, 0.926);
                 opacity: 1;
                 position: relative;
                 top: 100%;
@@ -52,6 +52,7 @@
             color: #fff;
             text-transform: uppercase;
             font-weight: bold;
+            margin-left: -10px;
         }
     }
     @include tablet {
