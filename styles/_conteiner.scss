@@ -11,5 +11,7 @@
     @include tablet {
         display: block;
         background-size: 100%;
+        background-size: cover;
+        height: 100%;
     }
 }

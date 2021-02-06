@@ -1,0 +1,54 @@
+.client {
+    display: flex;
+    padding: 0.5rem calc((100vw - 1200px)/2);
+    height: 130px;
+    align-items: center;
+    background: -webkit-linear-gradient(110deg, #F8F8F8 30%, #5ac7fa00 30%);
+    background: -o-linear-gradient(110deg, #F8F8F8 30%, #5ac7fa00 30%);
+    background: -moz-linear-gradient(110deg, #F8F8F8 30%, #5ac7fa00 30%);
+    background: linear-gradient(110deg, #F8F8F8 30%, #5ac7fa00 30%);
+    width: 100%;
+    position: relative;
+    @include tablet {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: auto;
+        padding-top: 40px;
+        text-align: center;
+        height: 100%;
+        background: -webkit-linear-gradient(180deg, #F8F8F8 20%, #5ac7fa00 10%);
+        background: -o-linear-gradient(180deg, #F8F8F8 20%, #5ac7fa00 10%);
+        background: -moz-linear-gradient(180deg, #F8F8F8 20%, #5ac7fa00 10%);
+        background: linear-gradient(180deg, #F8F8F8 20%, #5ac7fa00 10%);
+    }
+    &__title {
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    &__link {
+        text-decoration: none;
+        color: orange;
+        font-weight: bold;
+        & i {
+            margin-left: 10px;
+        }
+    }
+    &__customer {
+        display: flex;
+        justify-content: space-between;
+        margin: auto 50px auto auto;
+        align-items: center;
+        @include tablet {
+            display: inline-block;
+            margin: auto;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        &--item {
+            margin: auto 40px auto auto;
+            @include tablet {
+                margin: 10px auto auto auto;
+            }
+        }
+    }
+}
