@@ -1,0 +1,103 @@
+.experience {
+    padding: 0.5rem calc((90vw - 1100px)/2);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    &__product {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(100px, 350px));
+        grid-template-rows: 50% 50%;
+        border-left: rgba(128, 128, 128, 0.4) 1px solid;
+        border-bottom: rgba(128, 128, 128, 0.4) 1px solid;
+        margin: -10px 0 -10px 0;
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            border: none;
+        }
+        &--title {
+            font-size: 1rem;
+            text-transform: uppercase;
+            position: relative;
+            @include tablet {
+                margin: 10px auto;
+            }
+        }
+        & i {
+            color: orangered;
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        &--item {
+            border-top: rgba(128, 128, 128, 0.4) 1px solid;
+            border-right: rgba(128, 128, 128, 0.4) 1px solid;
+            text-align: center;
+            padding-top: 120px;
+            @include tablet {
+                border: none;
+                border-top: grey 1px solid;
+                padding: 10px;
+                margin: 10px;
+            }
+        }
+    }
+    &__info {
+        margin: 100px 0;
+        align-items: center;
+        position: relative;
+        @include tablet {
+            margin: 30px 0;
+        }
+    }
+    &__title {
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        margin: auto auto 10px auto;
+        @include tablet {
+            font-size: 2.5rem;
+        }
+        &--sub {
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            margin: auto auto 20px auto;
+            @include tablet {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    &__border {
+        border: none;
+        background-color: orangered;
+        height: 5px;
+        margin-bottom: 20px;
+        width: 100px;
+        border-radius: 5px;
+        @include tablet {
+            width: 95%;
+            display: inline-block;
+        }
+    }
+    &__text {
+        max-width: 500px;
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
+    &__button {
+        background-color: rgb(82, 82, 82);
+        border: none;
+        font-size: 1rem;
+        margin: 50px auto 100px auto;
+        padding: 14px 18px;
+        border-radius: 7px;
+        color: #fff;
+        text-transform: uppercase;
+        @include tablet {
+            margin-bottom: 0;
+        }
+    }
+}
