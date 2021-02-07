@@ -1,0 +1,112 @@
+.news {
+    padding: 0.5rem calc((100vw - 1200px)/2);
+    position: relative;
+    background: url("/img/Group8.png");
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-position: -10% 100%;
+    background-color: rgb(68, 68, 68);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        background-position: 0% 100%;
+        background-size: 100%;
+    }
+    &__info {
+        grid-column: 1/-1;
+    }
+    &__item {
+        grid-column-start: 2;
+        @include tablet {
+            background-color: rgba(255, 255, 255, 0.665);
+            padding: 10px 0;
+        }
+        &--title {
+            color: #fff;
+            margin: 50px auto 20px auto;
+            @include tablet {
+                color: #000;
+                text-align: center;
+            }
+        }
+        &--info {
+            color: rgb(151, 151, 151);
+            line-height: 2rem;
+            margin-bottom: 20px;
+            @include tablet {
+                color: #000;
+                text-align: center;
+                margin: auto 5px;
+            }
+        }
+        &--border {
+            border: none;
+            border-top: dotted 2px grey;
+            margin-bottom: 20px;
+            @include tablet {
+                color: #000;
+                margin: auto 5px;
+            }
+        }
+    }
+    &__client {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+    &__name {
+        color: rgb(151, 151, 151);
+        line-height: 3rem;
+        @include tablet {
+            color: #000;
+            font-size: 0.8rem;
+            margin: auto 5px;
+        }
+    }
+    &__answer {
+        line-height: 3rem;
+        color: rgb(151, 151, 151);
+        @include tablet {
+            color: #000;
+            font-size: 0.8rem;
+        }
+        &--web {
+            line-height: 3rem;
+            color: rgb(151, 151, 151);
+        }
+    }
+    &__title {
+        text-align: center;
+        margin: 50px auto 20px auto;
+        font-size: 3rem;
+        color: #fff;
+        text-transform: uppercase;
+        @include tablet {
+            font-size: 2.5rem;
+        }
+    }
+    &__border {
+        height: 5px;
+        background-color: orangered;
+        border: none;
+        width: 100px;
+        margin: auto auto 20px auto;
+        border-radius: 5px;
+    }
+    &__text {
+        color: rgb(151, 151, 151);
+        max-width: 500px;
+        margin: auto;
+        text-align: center;
+        line-height: 2rem;
+        @include tablet {
+            margin: auto 5px;
+        }
+    }
+    &__web {
+        color: orangered;
+    }
+}
