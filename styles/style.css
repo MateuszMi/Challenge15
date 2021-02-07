@@ -898,6 +898,154 @@
   font-weight: bold;
 }
 
+.focus {
+  padding: 0.5rem calc((100vw - 1200px)/2);
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  -ms-grid-columns: (minmax(100px, 350px))[4];
+      grid-template-columns: repeat(4, minmax(100px, 350px));
+  margin: 50px auto;
+  grid-gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .focus {
+    -ms-grid-columns: 31% 31% 31%;
+        grid-template-columns: 31% 31% 31%;
+    grid-gap: 10px;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .focus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.focus__info {
+  grid-column: 2 span;
+}
+
+@media screen and (max-width: 400px) {
+  .focus__info {
+    text-align: center;
+  }
+}
+
+.focus__title {
+  text-transform: uppercase;
+  margin: auto auto 10px auto;
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width: 400px) {
+  .focus__title {
+    font-size: 2rem;
+  }
+}
+
+.focus__title--sub {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin: auto auto 20px auto;
+}
+
+@media screen and (max-width: 768px) {
+  .focus__title--sub {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .focus__title--sub {
+    font-size: 1.4rem;
+  }
+}
+
+.focus__border {
+  height: 5px;
+  border: none;
+  background-color: orangered;
+  width: 100px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .focus__border {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .focus__border {
+    width: 95%;
+    margin: auto auto 10px auto;
+  }
+}
+
+.focus__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: #b5b1af 1px solid;
+  height: 150px;
+}
+
+.focus__item i {
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+  color: grey;
+}
+
+.focus__item--title {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.focus__button {
+  text-transform: uppercase;
+  padding: 20px 25px;
+  font-size: 1rem;
+  border: none;
+  background-color: orangered;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .focus__button {
+    padding: 15px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .focus__button {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
