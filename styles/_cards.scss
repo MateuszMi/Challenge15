@@ -1,0 +1,64 @@
+.cards {
+    background-color: rgb(38, 36, 36);
+    height: 100%;
+    padding: 0.5rem calc((100vw - 1200px)/2);
+    &__item {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(150px, 450px));
+        grid-template-rows: 300px;
+        grid-gap: 20px;
+        margin-top: 50px;
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 10px;
+        }
+        &--element {
+            background-color: rgb(77, 76, 76);
+            text-align: center;
+            padding-top: 120px;
+            border-radius: 10px;
+            @include tablet {
+                padding: 50px;
+            }
+        }
+        &--info {
+            background-color: #fff;
+            border-radius: 10px;
+            & a {
+                text-decoration: none;
+                color: orangered;
+                font-size: 1.2rem;
+                display: flex;
+                justify-content: center;
+                margin: 30px auto;
+            }
+        }
+        &--title {
+            color: #000;
+            margin: 50px auto 20px auto;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        &--text {
+            text-align: center;
+            margin: auto 15px;
+            line-height: 1.5rem;
+        }
+    }
+    &__button {
+        display: flex;
+        padding: 20px 50px;
+        background-color: rgb(12, 12, 12);
+        color: #fff;
+        border: none;
+        margin: 50px auto;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 10px;
+        text-transform: uppercase;
+    }
+    &__bold {
+        font-weight: bold;
+    }
+}
