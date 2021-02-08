@@ -9,7 +9,6 @@
     @include tablet {
         grid-template-columns: 31% 31% 31%;
         grid-gap: 10px;
-        width: 90%;
     }
     @include phone {
         display: flex;
@@ -21,9 +20,12 @@
             text-align: center;
         }
     }
+    &__text {
+        margin: auto 10px auto 10px;
+    }
     &__title {
         text-transform: uppercase;
-        margin: auto auto 10px auto;
+        margin: auto 10px 10px 10px;
         font-size: 2.5rem;
         @include phone {
             font-size: 2rem;
@@ -31,7 +33,7 @@
         &--sub {
             font-size: 1.5rem;
             text-transform: uppercase;
-            margin: auto auto 20px auto;
+            margin: auto 10px 20px 10px;
             @include tablet {
                 margin-bottom: 10px;
             }
@@ -45,7 +47,7 @@
         border: none;
         background-color: orangered;
         width: 100px;
-        margin-bottom: 20px;
+        margin: auto 10px 20px 10px;
         border-radius: 5px;
         @include tablet {
             margin-bottom: 10px;
