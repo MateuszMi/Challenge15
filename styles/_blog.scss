@@ -114,5 +114,10 @@
         display: flex;
         position: relative;
         margin: 30px auto auto auto;
+        &:hover {
+            transition: 0.5s;
+            transform: scale(1.05);
+            color: orangered;
+        }
     }
 }

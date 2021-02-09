@@ -2,8 +2,8 @@
     max-width: 500px;
     position: relative;
     padding: 0.9rem calc((50vw - 1200px)/2);
-    margin: auto 5px auto auto;
-    text-align: left;
+    margin: 200px auto;
+    ;
     @include tablet {
         margin: auto;
     }

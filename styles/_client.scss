@@ -29,6 +29,10 @@
         text-decoration: none;
         color: orange;
         font-weight: bold;
+        &:hover {
+            color: orangered;
+            transition: 0.5s;
+        }
         & i {
             margin-left: 10px;
         }

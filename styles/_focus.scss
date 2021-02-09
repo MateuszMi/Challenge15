@@ -84,6 +84,11 @@
         font-weight: bold;
         border-radius: 10px;
         cursor: pointer;
+        &:hover {
+            background-color: rgb(78, 78, 78);
+            transition: 0.5s;
+            transform: scale(1.05);
+        }
         @include tablet {
             padding: 15px 20px;
             font-size: 0.9rem;

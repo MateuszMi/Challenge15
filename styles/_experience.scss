@@ -96,6 +96,11 @@
         border-radius: 7px;
         color: #fff;
         text-transform: uppercase;
+        &:hover {
+            background-color: rgb(107, 106, 106);
+            transition: 0.5s;
+            transform: scale(1.05);
+        }
         @include tablet {
             margin-bottom: 0;
         }

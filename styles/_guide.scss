@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
-    background-image: url(/img/Layer80.png);
+    background-image: url(../img/Layer80.png);
     background-repeat: no-repeat;
     background-position: 10% 50%;
     background-color: rgb(252, 248, 248);
@@ -85,6 +85,11 @@
             border: none;
             display: flex;
             cursor: pointer;
+            &:hover {
+                background-color: rgb(78, 78, 78);
+                transition: 0.5s;
+                transform: scale(1.05);
+            }
             @include tablet {
                 font-size: 0.8rem;
             }
@@ -103,6 +108,12 @@
             margin-left: 10px;
             display: flex;
             cursor: pointer;
+            &:hover {
+                background-color: orangered;
+                color: #fff;
+                transition: 0.5s;
+                transform: scale(1.05);
+            }
             @include tablet {
                 font-size: 0.8rem;
             }

@@ -13,9 +13,10 @@
 
 <body>
     <div class="conteiner" id="home">
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
+
             <a href="#" class="navbar__logo">
-                <img src="/img/logo.png">
+                <img src="img/logo.png" alt="">
             </a>
 
             <div class="navbar__toggle" id="moblie--menu">
@@ -24,7 +25,7 @@
                 <span class="bar"></span>
             </div>
 
-            <ul class="navbar__menu">
+            <ul class="navbar__menu" id="navbar__menu">
                 <li class="navbar__item"><a class="navbar__links" href="#home">home</a></li>
                 <li class="navbar__item"><a class="navbar__links" href="#work">work</a> </li>
                 <li class="navbar__item"><a class="navbar__links" href="#industries">industries</a></li>
@@ -88,19 +89,19 @@
         </div>
         <div class="client__customer">
             <div class="client__customer--item">
-                <img src="/img/Layer4.png">
+                <img src="img/Layer4.png" alt="">
             </div>
             <div class="client__customer--item">
-                <img src="/img/Layer6.png">
+                <img src="img/Layer6.png" alt="">
             </div>
             <div class="client__customer--item">
-                <img src="/img/Layer7.png">
+                <img src="img/Layer7.png" alt="">
             </div>
             <div class="client__customer--item">
-                <img src="/img/Layer8.png">
+                <img src="img/Layer8.png" alt="">
             </div>
             <div class="client__customer--item">
-                <img src="/img/Layer10.png">
+                <img src="img/Layer10.png" alt="">
             </div>
         </div>
     </section>
@@ -182,10 +183,10 @@
     <section class="cards">
         <div class="cards__item">
             <div class="cards__item--element">
-                <img src="/img/Layer30.png">
+                <img src="img/Layer30.png" alt="">
             </div>
             <div class="cards__item--element">
-                <img src="/img/Layer31.png">
+                <img src="img/Layer31.png" alt="">
             </div>
             <div class="cards__item--info">
                 <h2 class="cards__item--title">futurethink</h2>
@@ -278,7 +279,7 @@
         </p>
         <div class="blog__item">
             <div class="blog__element">
-                <img src="/img/Layer43.png">
+                <img src="img/Layer43.png" alt="">
                 <h3 class="blog__element--title">Is there hope for the SEO profession?</h3>
                 <p class="blog__element--author">Post by Lawrence R. Smith</p>
                 <hr class="blog__element--border">
@@ -286,7 +287,7 @@
                 <a href="#" class="blog__element--link">Read more</a>
             </div>
             <div class="blog__element">
-                <img src="/img/Layer43_1.png">
+                <img src="img/Layer43_1.png" alt="">
                 <h3 class="blog__element--title">Is there hope for the SEO profession?</h3>
                 <p class="blog__element--author">Post by Esperanza A. Johson</p>
                 <hr class="blog__element--border">
@@ -294,7 +295,7 @@
                 <a href="#" class="blog__element--link">Read more</a>
             </div>
             <div class="blog__element">
-                <img src="/img/Layer43_2.png">
+                <img src="img/Layer43_2.png" alt="">
                 <h3 class="blog__element--title">Is there hope for the SEO profession?</h3>
                 <p class="blog__element--author">Post by Heather R. Williams</p>
                 <hr class="blog__element--border">
@@ -322,17 +323,16 @@
             <h2 class="contact__title">subscribe to our mailing list</h2>
             <form>
                 <div class="inputwrapper">
-                    <label for="email" class="contact__email">
-                        <input type="email" name="email" id="email" placeholder="Enter your e-mail">
-                        <form action="#">
-                            <button class="contact__button"><i class="fas fa-envelope"></i></button>
-                        </form>
+                    <label for="email" class="contact__email"></label>
+                    <input type="email" name="email" id="email" placeholder="Enter your e-mail">
                 </div>
+                <button class="contact__button"><i class="fas fa-envelope"></i></button>
             </form>
         </div>
     </footer>
-    <script src="slider.js"></script>
-    <script src="menu.js"></script>
+
+    <script src="JS/slider.js"></script>
+    <script src="JS/menu.js"></script>
 </body>
 
 </html>
